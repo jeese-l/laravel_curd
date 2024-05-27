@@ -30,7 +30,7 @@ class ControllerAutoMake implements IAutoMake
         $tplContent = file_get_contents($controllerTpl);
         $controllerName = ucfirst(camelize($controller));
         $daoName = ucfirst(camelize($table));
-        
+
         $tplContent = str_replace('<namespace>', $path, $tplContent);
         $tplContent = str_replace('<path>', $path, $tplContent);
         $tplContent = str_replace('<controller>', $controllerName, $tplContent);
