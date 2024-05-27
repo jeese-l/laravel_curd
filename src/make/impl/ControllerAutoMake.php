@@ -28,8 +28,8 @@ class ControllerAutoMake implements IAutoMake
     {
         $controllerTpl = dirname(dirname(__DIR__)) . '/tpl/controller.tpl';
         $tplContent = file_get_contents($controllerTpl);
-        $controllerName = ucfirst($controller);
-        $daoName = ucfirst($table);
+        $controllerName = ucfirst(camelize($controller));
+        $daoName = ucfirst(camelize($table));
 
         $tplContent = str_replace('<namespace>', $path, $tplContent);
         $tplContent = str_replace('<path>', $path, $tplContent);
