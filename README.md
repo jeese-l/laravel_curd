@@ -26,3 +26,6 @@ php 扩展包
 3. php80 artisan make:curd 表名 路径名称 控制器名称
 4. 在控制器上方有路由注释，可以粘贴到路由文件里
 5. 所有核心方法在baseDao文件里
+#### 借鉴
+tp6 curd
+https://github.com/nick-bai/tp6-curd
