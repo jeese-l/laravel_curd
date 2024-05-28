@@ -1,7 +1,7 @@
 # laravel_curd
 
 #### 介绍
-个人用的laravel_curd 
+laravel   curd 
 
 
 
