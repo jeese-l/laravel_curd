@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Dao\<namespace>;
+namespace App\Service\<namespace>;
 
 use App\Models\<path>\<table>Model;
-use App\Dao\BaseDao;
+use App\Service\BaseService;
 
-class <dao>Dao extends BaseDao
+class <serviceName>Service extends BaseService
 {
     public function setModel():string
     {

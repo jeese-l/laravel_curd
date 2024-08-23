@@ -4,7 +4,7 @@ namespace laravelCurd\Command;
 
 use Illuminate\Console\Command;
 use laravelCurd\make\impl\ControllerAutoMake;
-use laravelCurd\make\impl\DaoAutoMake;
+use laravelCurd\make\impl\ServiceAutoMake;
 use laravelCurd\make\impl\ModelAutoMake;
 
 
@@ -54,8 +54,8 @@ class LaravelCurdCommand extends Command
         (new ModelAutoMake())->check($table, $path);
         (new ModelAutoMake())->make($table, $path, '');
 
-        (new DaoAutoMake())->check($table,$path);
-        (new DaoAutoMake())->make($table,$path,'');
+        (new ServiceAutoMake())->check($table,$path);
+        (new ServiceAutoMake())->make($table,$path,'');
 
         (new ControllerAutoMake())->check($controller,$path);
         (new ControllerAutoMake())->make($controller,$path,$table);

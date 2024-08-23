@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Dao;
+namespace App\Service;
 
-abstract class BaseDao
+abstract class BaseService
 {
     abstract public function setModel(): string;
 
