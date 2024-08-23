@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\<namespace>;
 
-use App\Dao\<path>\<dao>Dao;
+use App\Service\<path>\<service>Service;
 use Illuminate\Http\Request;
 
 
@@ -18,7 +18,7 @@ class <controller> extends Base
     public function getList(Request $request)
     {
         $input =  $request->all();
-        $list =  (new <dao>Dao())->_getList($input);
+        $list =  (new <service>Service())->_getList($input);
         outPutSucc($list);
     }
 
@@ -26,7 +26,7 @@ class <controller> extends Base
     public function detail(Request $request)
     {
         $id = $request->get("id");
-        $info = (new <dao>Dao())->_detail($id);
+        $info = (new <service>Service())->_detail($id);
         outPutSucc($info);
     }
 
@@ -34,7 +34,7 @@ class <controller> extends Base
     public function del(Request $request)
     {
         $id = $request->post("id");
-        $info = (new <dao>Dao())->_del($id);
+        $info = (new <service>Service())->_del($id);
         outPutSucc($info, "操作成功");
     }
 
@@ -42,7 +42,7 @@ class <controller> extends Base
     public function save(Request $request)
     {
         $data = $request->all();
-        $res = (new <dao>Dao())->_save($data);
+        $res = (new <service>Service())->_save($data);
         outPutSucc($res, "请求成功");
     }
 

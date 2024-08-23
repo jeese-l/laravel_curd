@@ -29,12 +29,12 @@ class ControllerAutoMake implements IAutoMake
         $controllerTpl = dirname(dirname(__DIR__)) . '/tpl/controller.tpl';
         $tplContent = file_get_contents($controllerTpl);
         $controllerName = ucfirst(camelize($controller));
-        $daoName = ucfirst(camelize($table));
+        $serviceName = ucfirst(camelize($table));
 
         $tplContent = str_replace('<namespace>', $path, $tplContent);
         $tplContent = str_replace('<path>', $path, $tplContent);
         $tplContent = str_replace('<controller>', $controllerName, $tplContent);
-        $tplContent = str_replace('<dao>', $daoName, $tplContent);
+        $tplContent = str_replace('<service>', $serviceName, $tplContent);
 
         $dirPath = app_path() . DS . "Http" . DS . "Controllers" . DS . $path;
         $controllerFilePath = $dirPath . DS . $controllerName . ".php";
