@@ -26,7 +26,7 @@ class ServiceAutoMake implements IAutoMake
         $serviceTpl = dirname(dirname(__DIR__)) . '/tpl/service.tpl';
         $serviceTplContent = file_get_contents($serviceTpl);
 
-        $serviceName = ucfirst($table);
+        $serviceName = ucfirst(camelize($table));
         $modelName = ucfirst(camelize($table));
 
         $dirPath = app_path() . DS . "Service" . DS . $path ;

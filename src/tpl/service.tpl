@@ -2,7 +2,7 @@
 
 namespace App\Service\<namespace>;
 
-use App\Models\<path>\<table>Model;
+use App\Models\<path>\<model>Model;
 use App\Service\BaseService;
 
 class <serviceName>Service extends BaseService
